@@ -1,6 +1,0 @@
-fastAPI
-uvicorn
-sqlalchemy
-bcrypt
-python-jose
-
