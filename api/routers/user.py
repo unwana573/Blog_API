@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, status
-from Blog import database
+from api import database
 from .. import schemas
 from sqlalchemy.orm import Session 
 from ..repository import user
