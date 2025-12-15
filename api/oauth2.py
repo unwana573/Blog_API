@@ -3,7 +3,8 @@ from fastapi.security import OAuth2PasswordBearer
 from typing_extensions import Annotated
 from . import token
 
-oauth2_scheme =  OAuth2PasswordBearer(tokenUrl="login")
+
+oauth2_scheme =  OAuth2PasswordBearer(tokenUrl="/auth/login")
 
 def get_curent_user(data: str = Depends(oauth2_scheme)):
     credentials_exception = HTTPException(

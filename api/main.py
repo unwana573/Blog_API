@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from . import models
-from .database import engine
+from .database import connection
 from .hashing import Hash 
 from .routers import blog, user, authentication
 
 app = FastAPI()
 
-models.Base.metadata.create_all(engine)
+models.Base.metadata.create_all(connection)
 
 app.include_router(authentication.router)
 app.include_router(user.router)
